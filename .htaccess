@@ -1,0 +1,14 @@
+#AddType application/x-httpd-php5 .php
+Order Allow,Deny
+Allow from all
+Options -Indexes
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 2592000 seconds"
+ExpiresByType image/png "access plus 2592000 seconds"
+ExpiresByType image/gif "access plus 2592000 seconds"
+ExpiresByType text/css "access plus 2592000 seconds"
+</IfModule>
+<FilesMatch "\\.(jpeg|png|gif|css)$">
+Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>

@@ -1,0 +1,10 @@
+cache/*.*
+!cache/*.htm
+cache/**/*.*
+!cache/**/*.index.htm
+uploads/*
+!uploads/index.htm
+!uploads/avatar.jpg
+ajax/ajax
+
+ajax/ajax
